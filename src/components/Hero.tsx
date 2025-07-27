@@ -12,11 +12,12 @@ const Hero = () => {
           <div className="pt-6">
             <div className="flex items-center">
               <Image
-                src="/images/workproofed-logo.png"
+                src="/images/workproofed-icon.png"
                 alt="WorkProofed"
                 width={50}
                 height={50}
                 className="h-12 w-auto"
+                priority
               />
               <span className="ml-3 text-2xl font-bold text-gray-900">WorkProofed</span>
             </div>
@@ -60,11 +61,12 @@ const Hero = () => {
         <div className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full bg-gray-50 flex items-center justify-center">
           <div className="p-8 rounded-lg">
             <Image
-              src="/images/app-preview.png"
+              src="/images/workproofed-logo.png"
               alt="WorkProofed App Preview"
               width={400}
-              height={600}
+              height={400}
               className="rounded-lg shadow-2xl"
+              priority
             />
           </div>
         </div>

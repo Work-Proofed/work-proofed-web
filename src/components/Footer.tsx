@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
@@ -9,11 +10,18 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
-            <Link href="/" className="text-2xl font-bold text-white">
-              ProofWork
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/images/workproofed-icon.png"
+                alt="WorkProofed"
+                width={40}
+                height={40}
+                className="h-10 w-auto brightness-0 invert"
+              />
+              <span className="ml-2 text-2xl font-bold text-white">WorkProofed</span>
             </Link>
             <p className="mt-4 text-gray-300">
-              Document your professional journey and showcase your growth with ProofWork.
+              Document your professional journey and showcase your growth with WorkProofed.
             </p>
           </div>
           <div>
@@ -58,7 +66,7 @@ const Footer = () => {
         </div>
         <div className="mt-8 border-t border-gray-700 pt-8">
           <p className="text-base text-gray-400 text-center">
-            © {new Date().getFullYear()} ProofWork. All rights reserved.
+            © {new Date().getFullYear()} WorkProofed. All rights reserved.
           </p>
         </div>
       </div>
