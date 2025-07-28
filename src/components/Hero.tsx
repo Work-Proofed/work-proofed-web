@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 const Hero = () => {
   return (
@@ -42,15 +41,27 @@ const Hero = () => {
       </div>
       <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
         <div className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full bg-gray-50 flex items-center justify-center">
-          <div className="p-8 rounded-lg">
-            <Image
-              src="/images/app-preview.png"
-              alt="WorkProofed App Preview"
-              width={400}
-              height={400}
-              className="rounded-lg shadow-2xl"
-              priority
-            />
+          <div className="relative w-full max-w-lg mx-auto p-8">
+            <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-brand/10 to-brand/5"></div>
+              <div className="relative p-8">
+                <div className="space-y-6">
+                  <div className="h-4 bg-gray-200 rounded w-3/4"></div>
+                  <div className="space-y-3">
+                    <div className="h-4 bg-gray-200 rounded"></div>
+                    <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+                  </div>
+                  <div className="h-32 bg-gray-200 rounded"></div>
+                  <div className="flex space-x-4">
+                    <div className="h-10 bg-brand rounded w-1/3"></div>
+                    <div className="h-10 bg-gray-200 rounded w-1/3"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="absolute inset-0 pointer-events-none">
+              <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
+            </div>
           </div>
         </div>
       </div>

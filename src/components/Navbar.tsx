@@ -11,14 +11,7 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center">
-              <Image
-                src="/images/workproofed-icon.png"
-                alt="WorkProofed"
-                width={32}
-                height={32}
-                className="h-8 w-auto"
-              />
-              <span className="ml-2 text-xl font-bold text-brand">WorkProofed</span>
+              <div className="text-2xl font-bold text-brand">WorkProofed</div>
             </Link>
           </div>
           <div className="hidden sm:flex sm:items-center sm:space-x-8">

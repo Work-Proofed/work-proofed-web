@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 const Footer = () => {
   return (
@@ -11,14 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="flex items-center">
-              <Image
-                src="/images/workproofed-icon.png"
-                alt="WorkProofed"
-                width={40}
-                height={40}
-                className="h-10 w-auto brightness-0 invert"
-              />
-              <span className="ml-2 text-2xl font-bold text-white">WorkProofed</span>
+              <div className="text-2xl font-bold text-white">WorkProofed</div>
             </Link>
             <p className="mt-4 text-gray-300">
               The all-in-one platform for service professionals to manage jobs, prove work completion, and get paid faster.
