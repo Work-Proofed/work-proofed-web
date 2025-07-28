@@ -12,11 +12,11 @@ const Hero = () => {
           <div className="pt-6">
             <div className="flex items-center">
               <Image
-                src="/images/workproofed-icon.png"
+                src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80"
                 alt="WorkProofed"
                 width={50}
                 height={50}
-                className="h-12 w-auto"
+                className="h-12 w-12 rounded-full object-cover"
                 priority
               />
               <span className="ml-3 text-2xl font-bold text-gray-900">WorkProofed</span>
@@ -38,7 +38,7 @@ const Hero = () => {
                     href="/signup"
                     className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-brand hover:bg-brand-dark md:py-4 md:text-lg md:px-10 transition duration-150"
                   >
-                    Start Your Free Trial
+                    Get Started Today
                   </Link>
                 </div>
                 <div className="mt-3 sm:mt-0 sm:ml-3">
@@ -50,25 +50,20 @@ const Hero = () => {
                   </Link>
                 </div>
               </div>
-              <p className="mt-3 text-sm text-gray-500">
-                No credit card required • 14-day free trial • Cancel anytime
-              </p>
             </div>
           </main>
         </div>
       </div>
       <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-        <div className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full bg-gray-50 flex items-center justify-center">
-          <div className="p-8 rounded-lg">
-            <Image
-              src="/images/workproofed-logo.png"
-              alt="WorkProofed App Preview"
-              width={400}
-              height={400}
-              className="rounded-lg shadow-2xl"
-              priority
-            />
-          </div>
+        <div className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full">
+          <Image
+            src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            alt="Service Professional at Work"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-lg"
+            priority
+          />
         </div>
       </div>
     </div>

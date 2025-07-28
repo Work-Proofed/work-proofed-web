@@ -12,11 +12,11 @@ const Navbar = () => {
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center">
               <Image
-                src="/images/workproofed-icon.png"
+                src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80"
                 alt="WorkProofed"
                 width={32}
                 height={32}
-                className="h-8 w-auto"
+                className="h-8 w-8 rounded-full object-cover"
               />
               <span className="ml-2 text-xl font-bold text-brand">WorkProofed</span>
             </Link>
