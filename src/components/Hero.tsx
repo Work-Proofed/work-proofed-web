@@ -9,20 +9,6 @@ const Hero = () => {
     <div className="relative bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-          <div className="pt-6">
-            <div className="flex items-center">
-              <Image
-                src="/images/workproofed-icon.png"
-                alt="WorkProofed"
-                width={50}
-                height={50}
-                className="h-12 w-auto"
-                priority
-              />
-              <span className="ml-3 text-2xl font-bold text-gray-900">WorkProofed</span>
-            </div>
-          </div>
-          
           <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
             <div className="sm:text-center lg:text-left">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
@@ -58,7 +44,7 @@ const Hero = () => {
         <div className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full bg-gray-50 flex items-center justify-center">
           <div className="p-8 rounded-lg">
             <Image
-              src="/images/workproofed-logo.png"
+              src="/images/app-preview.png"
               alt="WorkProofed App Preview"
               width={400}
               height={400}
