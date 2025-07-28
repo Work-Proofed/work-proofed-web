@@ -6,35 +6,32 @@ import Image from 'next/image';
 
 const Navbar = () => {
   return (
-    <nav className="fixed w-full bg-transparent z-50">
+    <nav className="fixed w-full bg-white/80 backdrop-blur-md z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center">
               <Image
-                src="/images/logo.svg"
+                src="/images/workproofed-icon.png"
                 alt="WorkProofed"
                 width={32}
                 height={32}
                 className="h-8 w-auto"
               />
-              <span className="ml-2 text-xl font-bold text-white">WorkProofed</span>
+              <span className="ml-2 text-xl font-bold text-brand">WorkProofed</span>
             </Link>
           </div>
           <div className="hidden sm:flex sm:items-center sm:space-x-8">
-            <Link href="#features" className="text-gray-100 hover:text-white">
+            <Link href="#features" className="text-gray-600 hover:text-brand">
               Features
             </Link>
-            <Link href="#pricing" className="text-gray-100 hover:text-white">
+            <Link href="#pricing" className="text-gray-600 hover:text-brand">
               Pricing
             </Link>
-            <Link href="#contact" className="text-gray-100 hover:text-white">
+            <Link href="#contact" className="text-gray-600 hover:text-brand">
               Contact
             </Link>
-            <Link 
-              href="/app" 
-              className="px-4 py-2 rounded-lg bg-white text-brand hover:bg-gray-100 transition-all"
-            >
+            <Link href="/app" className="btn-primary">
               Launch App
             </Link>
           </div>
