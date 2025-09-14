@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 const Hero = () => {
   return (
@@ -50,14 +49,63 @@ const Hero = () => {
               <div className="h-[46px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -start-[17px] top-[178px] rounded-s-lg"></div>
               <div className="h-[64px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -end-[17px] top-[142px] rounded-e-lg"></div>
               <div className="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-white dark:bg-gray-800">
-                <Image
-                  src="/images/app-invoice-screen.png"
-                  alt="WorkProofed App Invoice Screen"
-                  width={272}
-                  height={572}
-                  className="dark:hidden"
-                  priority
-                />
+                {/* Demo Content */}
+                <div className="p-4">
+                  <div className="flex items-center justify-between mb-6">
+                    <h2 className="text-xl font-semibold text-gray-900">Payment Summary</h2>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="space-y-2">
+                      <div className="flex justify-between items-center">
+                        <span className="text-gray-600">Job</span>
+                        <span className="font-medium">Kitchen Renovation - Phase 1</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-gray-600">Client</span>
+                        <span className="font-medium">Sarah Johnson</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-gray-600">Job ID</span>
+                        <span className="font-medium">#12345</span>
+                      </div>
+                    </div>
+                    <div className="mt-6 pt-6 border-t border-gray-200">
+                      <div className="space-y-2">
+                        <div className="flex justify-between items-center">
+                          <span className="text-gray-600">Subtotal</span>
+                          <span className="font-medium">$2,850.00</span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="text-gray-600">Processing Fee (2.5%)</span>
+                          <span className="font-medium">$71.25</span>
+                        </div>
+                      </div>
+                      <div className="mt-4 pt-4 border-t border-gray-200">
+                        <div className="flex justify-between items-center">
+                          <span className="text-lg font-semibold">Total Amount</span>
+                          <span className="text-lg font-semibold text-brand">$2,921.25</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="mt-6">
+                      <div className="bg-gray-50 rounded-lg p-4">
+                        <div className="flex items-center space-x-3">
+                          <div className="flex-shrink-0">
+                            <div className="h-10 w-10 bg-brand/10 rounded-full flex items-center justify-center">
+                              <svg className="h-6 w-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                              </svg>
+                            </div>
+                          </div>
+                          <div>
+                            <div className="font-medium">Credit Card</div>
+                            <div className="text-sm text-gray-500">Visa, Mastercard, American Express</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             
