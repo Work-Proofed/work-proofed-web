@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Hero = () => {
   return (
@@ -23,7 +24,7 @@ const Hero = () => {
                     href="/signup"
                     className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-brand hover:bg-brand-dark md:py-4 md:text-lg md:px-10 transition duration-150"
                   >
-                    Get Started Today
+                    Start Your Free Trial
                   </Link>
                 </div>
                 <div className="mt-3 sm:mt-0 sm:ml-3">
@@ -42,25 +43,45 @@ const Hero = () => {
       <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
         <div className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full bg-gray-50 flex items-center justify-center">
           <div className="relative w-full max-w-lg mx-auto p-8">
-            <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-brand/10 to-brand/5"></div>
-              <div className="relative p-8">
-                <div className="space-y-6">
-                  <div className="h-4 bg-gray-200 rounded w-3/4"></div>
-                  <div className="space-y-3">
-                    <div className="h-4 bg-gray-200 rounded"></div>
-                    <div className="h-4 bg-gray-200 rounded w-5/6"></div>
-                  </div>
-                  <div className="h-32 bg-gray-200 rounded"></div>
-                  <div className="flex space-x-4">
-                    <div className="h-10 bg-brand rounded w-1/3"></div>
-                    <div className="h-10 bg-gray-200 rounded w-1/3"></div>
-                  </div>
-                </div>
+            {/* Phone Frame */}
+            <div className="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl">
+              <div className="h-[32px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -start-[17px] top-[72px] rounded-s-lg"></div>
+              <div className="h-[46px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -start-[17px] top-[124px] rounded-s-lg"></div>
+              <div className="h-[46px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -start-[17px] top-[178px] rounded-s-lg"></div>
+              <div className="h-[64px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -end-[17px] top-[142px] rounded-e-lg"></div>
+              <div className="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-white dark:bg-gray-800">
+                <Image
+                  src="/images/app-invoice-screen.png"
+                  alt="WorkProofed App Invoice Screen"
+                  width={272}
+                  height={572}
+                  className="dark:hidden"
+                  priority
+                />
               </div>
             </div>
-            <div className="absolute inset-0 pointer-events-none">
-              <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
+            
+            {/* Floating Features */}
+            <div className="absolute top-4 -left-20 bg-white rounded-lg shadow-lg p-4 border border-gray-100">
+              <div className="flex items-center space-x-2">
+                <div className="w-8 h-8 bg-brand/10 rounded-full flex items-center justify-center">
+                  <svg className="w-4 h-4 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <span className="text-sm font-medium">Instant Payments</span>
+              </div>
+            </div>
+            
+            <div className="absolute bottom-4 -right-20 bg-white rounded-lg shadow-lg p-4 border border-gray-100">
+              <div className="flex items-center space-x-2">
+                <div className="w-8 h-8 bg-brand/10 rounded-full flex items-center justify-center">
+                  <svg className="w-4 h-4 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                  </svg>
+                </div>
+                <span className="text-sm font-medium">Proof of Work</span>
+              </div>
             </div>
           </div>
         </div>
@@ -69,4 +90,4 @@ const Hero = () => {
   );
 };
 
-export default Hero; 
+export default Hero;

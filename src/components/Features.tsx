@@ -1,9 +1,10 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { 
   DocumentCheckIcon,
-  PhotoIcon,
+  CameraIcon,
   CreditCardIcon,
   BellAlertIcon,
   DevicePhoneMobileIcon,
@@ -13,39 +14,35 @@ import {
 const features = [
   {
     name: 'Smart Job Management',
-    description: 'Stop juggling paper and spreadsheets. Create, track, and manage all your jobs in one place—as easily as sending a text.',
+    description: 'Create detailed job tickets in seconds. Add client info, requirements, and pricing with just a few taps.',
     icon: DocumentCheckIcon,
-    benefit: 'Save 15+ hours every week on admin work'
+    benefit: 'Save 15+ hours every week on admin work',
+    image: '/images/app-create-job.png',
+    imageAlt: 'Job Creation Screen'
   },
   {
-    name: 'Proof of Completion',
-    description: 'End disputes forever with before/after photos and detailed completion records that protect you and build trust with clients.',
-    icon: PhotoIcon,
-    benefit: 'Reduce client disputes by 90%'
-  },
-  {
-    name: 'Instant Payments',
-    description: 'Get paid on the spot with built-in payment processing. No more awkward payment conversations or chasing down checks.',
+    name: 'Professional Invoicing',
+    description: 'Generate beautiful, professional invoices automatically. Include work documentation and payment options.',
     icon: CreditCardIcon,
-    benefit: 'Get paid 73% faster'
+    benefit: 'Get paid 73% faster',
+    image: '/images/app-invoice-screen.png',
+    imageAlt: 'Invoice Screen'
   },
   {
-    name: 'Automated Follow-ups',
-    description: 'Let the app automatically send invoices, payment reminders, and receipts while you focus on the actual work.',
-    icon: BellAlertIcon,
-    benefit: 'Never chase payments again'
+    name: 'Payment Processing',
+    description: 'Accept credit cards and bank transfers instantly with our built-in payment processing at just 2.5%.',
+    icon: CreditCardIcon,
+    benefit: 'Lower fees than competitors',
+    image: '/images/app-payment-screen.png',
+    imageAlt: 'Payment Processing Screen'
   },
   {
-    name: 'Mobile-First Design',
-    description: 'Run your entire business from your phone. No computer needed, no tech skills required—just tap and go.',
-    icon: DevicePhoneMobileIcon,
-    benefit: 'Work from anywhere, anytime'
-  },
-  {
-    name: 'Business Insights',
-    description: 'See exactly how your business is performing with simple reports on jobs, earnings, and client satisfaction.',
-    icon: ChartBarIcon,
-    benefit: 'Make data-driven decisions'
+    name: 'Job Documentation',
+    description: 'Capture before and after photos, add notes, and maintain a complete record of every job.',
+    icon: CameraIcon,
+    benefit: 'Reduce disputes by 90%',
+    image: '/images/app-job-details.png',
+    imageAlt: 'Job Details Screen'
   }
 ];
 
@@ -64,19 +61,44 @@ const Features = () => {
         </div>
 
         <div className="mt-16">
-          <div className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-            {features.map((feature) => (
-              <div key={feature.name} className="relative bg-white p-6 rounded-xl shadow-brand hover:shadow-lg transition duration-300">
-                <div className="flex items-center">
-                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-brand bg-opacity-10 text-brand">
-                    <feature.icon className="h-6 w-6" aria-hidden="true" />
+          <div className="space-y-16">
+            {features.map((feature, index) => (
+              <div 
+                key={feature.name}
+                className={`flex flex-col lg:flex-row items-center gap-8 ${
+                  index % 2 === 1 ? 'lg:flex-row-reverse' : ''
+                }`}
+              >
+                {/* Content */}
+                <div className="flex-1">
+                  <div className="flex items-center mb-4">
+                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-brand bg-opacity-10 text-brand">
+                      <feature.icon className="h-6 w-6" aria-hidden="true" />
+                    </div>
+                    <h3 className="ml-4 text-2xl font-bold text-gray-900">{feature.name}</h3>
                   </div>
-                  <div className="ml-4">
-                    <h3 className="text-lg font-medium text-gray-900">{feature.name}</h3>
-                    <p className="text-sm text-brand font-medium">{feature.benefit}</p>
+                  <p className="text-lg text-brand font-medium mb-2">{feature.benefit}</p>
+                  <p className="text-gray-500 text-lg">{feature.description}</p>
+                </div>
+
+                {/* Phone Frame */}
+                <div className="flex-1">
+                  <div className="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl">
+                    <div className="h-[32px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -start-[17px] top-[72px] rounded-s-lg"></div>
+                    <div className="h-[46px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -start-[17px] top-[124px] rounded-s-lg"></div>
+                    <div className="h-[46px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -start-[17px] top-[178px] rounded-s-lg"></div>
+                    <div className="h-[64px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -end-[17px] top-[142px] rounded-e-lg"></div>
+                    <div className="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-white dark:bg-gray-800">
+                      <Image
+                        src={feature.image}
+                        alt={feature.imageAlt}
+                        width={272}
+                        height={572}
+                        className="dark:hidden"
+                      />
+                    </div>
                   </div>
                 </div>
-                <p className="mt-3 text-base text-gray-500">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -86,4 +108,4 @@ const Features = () => {
   );
 };
 
-export default Features; 
+export default Features;

@@ -6,15 +6,14 @@ import { CheckIcon } from '@heroicons/react/24/outline';
 const features = [
   'Unlimited job tickets',
   'Before/after photo storage',
+  'Professional invoicing',
   'Client management',
-  'Instant invoicing',
-  'Payment processing (2.5%)',
-  'Automated reminders',
   'Mobile app access',
-  '24/7 email support',
-  'Team management',
-  'Advanced reporting',
-  'Priority support',
+  'Automated payment reminders',
+  'Real-time job tracking',
+  'Business analytics',
+  'Email & chat support',
+  'Secure data backup'
 ];
 
 const Pricing = () => {
@@ -31,7 +30,7 @@ const Pricing = () => {
         </div>
 
         <div className="mt-16 flex justify-center">
-          <div className="relative rounded-2xl bg-white p-8 shadow-lg flex flex-col max-w-lg w-full">
+          <div className="relative rounded-2xl bg-white p-8 shadow-xl flex flex-col max-w-lg w-full">
             <div className="flex-1">
               <div className="flex items-center justify-between">
                 <h3 className="text-xl font-semibold text-gray-900">Professional Plan</h3>
@@ -39,7 +38,7 @@ const Pricing = () => {
                   Most Popular
                 </span>
               </div>
-              
+
               <div className="mt-4 flex items-baseline">
                 <span className="text-5xl font-extrabold tracking-tight text-gray-900">$59.99</span>
                 <span className="ml-1 text-xl font-semibold">/month</span>
@@ -50,28 +49,34 @@ const Pricing = () => {
                 {features.map((feature) => (
                   <li key={feature} className="flex items-start">
                     <div className="flex-shrink-0">
-                      <CheckIcon className="h-6 w-6 text-brand" aria-hidden="true" />
+                      <CheckIcon className="h-6 w-6 text-brand" />
                     </div>
-                    <p className="ml-3 text-base text-gray-700">{feature}</p>
+                    <span className="ml-3 text-base text-gray-500">{feature}</span>
                   </li>
                 ))}
               </ul>
-            </div>
 
-            <div className="mt-8">
-              <button
-                className="w-full rounded-lg px-4 py-3 text-center text-sm font-semibold text-white bg-brand hover:bg-brand-dark transition-all"
-              >
-                Get Started Now
-              </button>
-            </div>
+              <div className="mt-8">
+                <button
+                  className="w-full rounded-lg px-4 py-3 text-center text-sm font-semibold text-white bg-brand hover:bg-brand-dark transition-all"
+                >
+                  Get Started Now
+                </button>
+              </div>
 
-            <div className="mt-6">
-              <div className="rounded-lg bg-gray-50 p-6">
-                <h4 className="text-sm font-medium text-gray-900">Payment Processing</h4>
-                <p className="mt-2 text-sm text-gray-500">
-                  Only pay for what you process. Standard rate of 2.5% per transaction.
-                  Additional Stripe fee of 2.9% + $0.30 applies.
+              <div className="mt-6">
+                <div className="rounded-lg bg-gray-50 p-6">
+                  <h4 className="text-sm font-medium text-gray-900">Payment Processing</h4>
+                  <p className="mt-2 text-sm text-gray-500">
+                    Only pay for what you process. Standard rate of 2.5% per transaction.
+                    Additional Stripe fee of 2.9% + $0.30 applies.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-6 text-center">
+                <p className="text-sm text-gray-500">
+                  Questions? <a href="#contact" className="text-brand hover:text-brand-dark">Contact our team</a>
                 </p>
               </div>
             </div>
@@ -88,4 +93,4 @@ const Pricing = () => {
   );
 };
 
-export default Pricing; 
+export default Pricing;
